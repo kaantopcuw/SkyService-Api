@@ -1,0 +1,21 @@
+# Git ve IDE yapılandırma dosyaları
+.git
+.idea
+*.iml
+
+# Build çıktıları ve loglar
+target/
+build/
+*.log
+
+# Maven Wrapper dosyaları
+.mvn/wrapper/
+mvnw
+mvnw.cmd
+
+# Docker ile ilgili dosyaların kendileri
+Dockerfile
+.dockerignore
+
+# İşletim sistemine özgü dosyalar
+.DS_Store
