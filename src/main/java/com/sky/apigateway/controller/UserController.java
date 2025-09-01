@@ -13,6 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin(origins = "https://sky-services.netlify.app/")
 public class UserController {
 
     private final UserService userService;

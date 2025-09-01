@@ -12,6 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin(origins = "https://sky-services.netlify.app/")
 public class AvailabilityController {
 
     private final AvailabilityService avilabilityService;
