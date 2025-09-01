@@ -29,5 +29,8 @@ COPY --from=builder ${JAR_FILE} app.jar
 # Spring Boot uygulamasının varsayılan portunu dışarıya aç
 EXPOSE 8080
 
+# Veritabanı dosyalarının kalıcı olmasını sağlamak için bir volume tanımla
+VOLUME /app/data
+
 # Konteyner başladığında uygulamayı çalıştıracak komut
 ENTRYPOINT ["java","-jar","app.jar"]
