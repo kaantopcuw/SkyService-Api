@@ -86,7 +86,7 @@ public class SkyAlpsService {
                 .block();
 
         try {
-            Thread.sleep(500);
+            Thread.sleep(800);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }

@@ -25,6 +25,6 @@ public class Flight {
             .filter(fare -> fare.getPrice() != null)
             .mapToDouble(Fare::getPrice)
             .min()
-            .orElse(Double.MAX_VALUE);
+            .orElse(999999999.0);
     }
 }
