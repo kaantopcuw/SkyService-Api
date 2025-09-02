@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "https://sky-services.netlify.app/")
+@CrossOrigin(origins = {"https://sky-services.netlify.app/", "*"})
 public class UserController {
 
     private final UserService userService;
@@ -59,7 +59,7 @@ public class UserController {
     }
 
     @DeleteMapping("/alarms/{id}")
-    public ResponseEntity<?> deleteAlarm (@PathVariable Long id){
+    public ResponseEntity<?> deleteAlarm(@PathVariable Long id) {
         userService.deleteAlarm(id);
         return ResponseEntity.ok().build();
     }
