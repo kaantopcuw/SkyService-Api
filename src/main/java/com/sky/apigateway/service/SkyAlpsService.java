@@ -163,6 +163,17 @@ public class SkyAlpsService {
 
                             fares.add(Fare.builder().fareType(fareTitle).price(price).details(details).build());
                         }
+                    } else {
+                        String priceText = fareItemSelector.select(".price-best-offer").text();
+                        double price = parsePrice(priceText);
+
+                        List<String> details = new ArrayList<>();
+                        details.add("This fare is exclusively reserved for Marche residents, and passenger documents will be strictly checked at the airport.");
+                        details.add("Hand Baggage - 1 x 8kg (55 x 40 x 23cm)");
+                        details.add("Rebooking not possible");
+                        details.add("No refund");
+
+                        fares.add(Fare.builder().fareType("PSO FLIGHT").details(details).price(price).build());
                     }
                 }
 
@@ -184,7 +195,6 @@ public class SkyAlpsService {
         }
         return flightList;
     }
-
 
 
 }
