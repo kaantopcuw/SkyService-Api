@@ -46,6 +46,12 @@ public class UserController {
         }
     }
 
+    @GetMapping("/users")
+    public ResponseEntity<List<User>> getAllUsers() {
+        List<User> users = userService.getAllUsers();
+        return ResponseEntity.ok(users);
+    }
+
     @PostMapping("/alarms")
     public ResponseEntity<PriceAlarm> createPriceAlarm(@RequestBody PriceAlarm priceAlarm) {
         PriceAlarm createdAlarm = userService.createPriceAlarm(priceAlarm);
