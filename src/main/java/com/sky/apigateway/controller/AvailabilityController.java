@@ -12,7 +12,6 @@ import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AvailabilityController {
 
     private final AvailabilityService avilabilityService;
